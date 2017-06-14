@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^RefreshBlock)(void);
+
 @interface TableViewHeaderRefresh : UIView
+
+@property(nonatomic, copy, setter=setRefreshBlock:) RefreshBlock mRefreshBlock;
 
 @end

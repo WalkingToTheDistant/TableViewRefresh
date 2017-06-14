@@ -13,6 +13,10 @@
 		CF1385F81EEFCDCA007E2C1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1385F61EEFCDCA007E2C1D /* Main.storyboard */; };
 		CF1385FA1EEFCDCA007E2C1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1385F91EEFCDCA007E2C1D /* Assets.xcassets */; };
 		CF1385FD1EEFCDCA007E2C1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1385FB1EEFCDCA007E2C1D /* LaunchScreen.storyboard */; };
+		CF1386071EEFD069007E2C1D /* TableViewHeaderRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1386061EEFD069007E2C1D /* TableViewHeaderRefresh.m */; };
+		CF13860B1EEFD539007E2C1D /* CPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = CF13860A1EEFD539007E2C1D /* CPublic.m */; };
+		CF1386101EEFD8F2007E2C1D /* RefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF13860F1EEFD8F2007E2C1D /* RefreshLayer.m */; };
+		CF1386131EF11E52007E2C1D /* TableViewFooterRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1386121EF11E52007E2C1D /* TableViewFooterRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,15 @@
 		CF1385F91EEFCDCA007E2C1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1385FC1EEFCDCA007E2C1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF1385FE1EEFCDCA007E2C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1386051EEFD069007E2C1D /* TableViewHeaderRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeaderRefresh.h; sourceTree = "<group>"; };
+		CF1386061EEFD069007E2C1D /* TableViewHeaderRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeaderRefresh.m; sourceTree = "<group>"; };
+		CF1386091EEFD539007E2C1D /* CPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPublic.h; sourceTree = "<group>"; };
+		CF13860A1EEFD539007E2C1D /* CPublic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPublic.m; sourceTree = "<group>"; };
+		CF13860C1EEFD557007E2C1D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		CF13860E1EEFD8F2007E2C1D /* RefreshLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshLayer.h; sourceTree = "<group>"; };
+		CF13860F1EEFD8F2007E2C1D /* RefreshLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshLayer.m; sourceTree = "<group>"; };
+		CF1386111EF11E52007E2C1D /* TableViewFooterRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewFooterRefresh.h; sourceTree = "<group>"; };
+		CF1386121EF11E52007E2C1D /* TableViewFooterRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewFooterRefresh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,8 @@
 		CF1385EC1EEFCDCA007E2C1D /* TableViewRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				CF1386081EEFD539007E2C1D /* Util */,
+				CF1386041EEFCE24007E2C1D /* TableViewRefresh */,
 				CF1385F01EEFCDCA007E2C1D /* AppDelegate.h */,
 				CF1385F11EEFCDCA007E2C1D /* AppDelegate.m */,
 				CF1385F31EEFCDCA007E2C1D /* ViewController.h */,
@@ -74,9 +89,40 @@
 		CF1385ED1EEFCDCA007E2C1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF13860C1EEFD557007E2C1D /* PrefixHeader.pch */,
 				CF1385EE1EEFCDCA007E2C1D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF1386041EEFCE24007E2C1D /* TableViewRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				CF13860D1EEFD8DF007E2C1D /* RefreshLayer */,
+				CF1386051EEFD069007E2C1D /* TableViewHeaderRefresh.h */,
+				CF1386061EEFD069007E2C1D /* TableViewHeaderRefresh.m */,
+				CF1386111EF11E52007E2C1D /* TableViewFooterRefresh.h */,
+				CF1386121EF11E52007E2C1D /* TableViewFooterRefresh.m */,
+			);
+			path = TableViewRefresh;
+			sourceTree = "<group>";
+		};
+		CF1386081EEFD539007E2C1D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CF1386091EEFD539007E2C1D /* CPublic.h */,
+				CF13860A1EEFD539007E2C1D /* CPublic.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CF13860D1EEFD8DF007E2C1D /* RefreshLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CF13860E1EEFD8F2007E2C1D /* RefreshLayer.h */,
+				CF13860F1EEFD8F2007E2C1D /* RefreshLayer.m */,
+			);
+			path = RefreshLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +156,7 @@
 				TargetAttributes = {
 					CF1385E91EEFCDCA007E2C1D = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -151,7 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1385F51EEFCDCA007E2C1D /* ViewController.m in Sources */,
+				CF1386101EEFD8F2007E2C1D /* RefreshLayer.m in Sources */,
+				CF13860B1EEFD539007E2C1D /* CPublic.m in Sources */,
 				CF1385F21EEFCDCA007E2C1D /* AppDelegate.m in Sources */,
+				CF1386131EF11E52007E2C1D /* TableViewFooterRefresh.m in Sources */,
+				CF1386071EEFD069007E2C1D /* TableViewHeaderRefresh.m in Sources */,
 				CF1385EF1EEFCDCA007E2C1D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,10 +322,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = TableViewRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhj.TableViewRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -283,10 +336,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = TableViewRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhj.TableViewRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -309,6 +365,7 @@
 				CF1386031EEFCDCA007E2C1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

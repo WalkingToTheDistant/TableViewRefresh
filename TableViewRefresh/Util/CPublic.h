@@ -15,6 +15,8 @@
 #define NSStringIsNotEmpry(str) (str != nil && [str isKindOfClass:[NSNull class]] != YES && [str isEqualToString:@""] != YES && str.length > 0)
 #define NSStringIsEmpry(str) (str == nil || [str isKindOfClass:[NSNull class]] == YES || [str isEqualToString:@""] == YES || str.length <= 0)
 
+#define Angle(a) (a/180.0f * M_PI)
+
 @interface CPublic : NSObject
 
 @end

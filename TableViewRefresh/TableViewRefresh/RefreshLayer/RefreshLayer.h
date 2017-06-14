@@ -8,6 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface RefreshLayer : CALayer
+@interface RefreshLayer : CAShapeLayer
+
+/** 0.0 ~ 1.0 */
+@property(nonatomic, assign, setter=setProcess:) float mProcess;
 
 @end

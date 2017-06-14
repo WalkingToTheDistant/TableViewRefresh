@@ -7,18 +7,44 @@
 //
 
 #import "ViewController.h"
+#import "TableViewHeaderRefresh.h"
+#import "TableViewFooterRefresh.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
+{
+    UITableView *mTableView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    [tableView setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:tableView];
+    
+    TableViewHeaderRefresh *headerRefresh = [TableViewHeaderRefresh new];
+    [headerRefresh setRefreshBlock:^(void){
+    
+    }];
+    [tableView addSubview:headerRefresh];
+    
+    TableViewFooterRefresh *footerRefresh = [TableViewFooterRefresh new];
+    [footerRefresh setRefreshBlock:^(void){
+    
+    }];
+    [tableView addSubview:footerRefresh];
+    mTableView = tableView;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [mTableView setContentSize:mTableView.bounds.size];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

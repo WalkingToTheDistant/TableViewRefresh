@@ -10,7 +10,7 @@
 
 typedef void(^RefreshBlock)(void);
 
-@interface TableViewHeaderRefresh : UIView
+@interface TableViewFooterRefresh : UIView
 
 @property(nonatomic, copy, setter=setRefreshBlock:) RefreshBlock mRefreshBlock;
 
